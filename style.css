@@ -1,0 +1,74 @@
+body {
+    margin: 20px;
+    background-color: blanchedalmond;
+}
+
+.grid {
+    margin: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 600px;
+    gap: 10px;
+    /* background-color: chartreuse; */
+    
+}
+
+.flash {
+    box-sizing: border-box;
+    padding: 3px;
+    width: 100px;
+    height: 200px;
+    font-size: 10px;
+    border: 5px solid black;
+    background-color: rgb(0, 217, 255);
+}
+
+.flip-box {
+
+  width: 100px;
+  height: 200px;
+  perspective: 1000px;
+    /* background-color: red; */
+
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transform: rotateY(0deg);
+ z-index: 2;
+}
+
+p{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.back {
+
+  transform: rotateY(180deg);
+}
+
+
+.grid .flip-box .flip {
+ transform: rotateY(180deg); 
+}
